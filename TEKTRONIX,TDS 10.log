@@ -1,0 +1,49 @@
+
+########################################
+# 09/05/17 - 16:22:06                  #
+# Session started                      #
+# USB0::0x0699::0x0363::C102220::0::INSTR #
+# TEKTRONIX,TDS 1002B,C102220,CF:91.1CT FV:v22.11
+ #
+########################################
+
+########################################
+# 09/05/17 - 16:52:22                  #
+# Session started                      #
+# USB0::0x0699::0x0363::C102220::0::INSTR #
+# TEKTRONIX,TDS 1002B,C102220,CF:91.1CT FV:v22.11
+ #
+########################################
+
+########################################
+# 09/05/17 - 16:53:18                  #
+# Session started                      #
+# USB0::0x0699::0x0363::C102220::0::INSTR #
+# TEKTRONIX,TDS 1002B,C102220,CF:91.1CT FV:v22.11
+ #
+########################################
+17:42:58 >> ACQ:MOD AVG
+17:43:14 >> ACQ:MOD SAMP
+17:43:22 >> ACQ:MOD AVG
+17:43:27 >> ACQ:MOD AVEG
+17:43:32 >> ACQ:MOD AVER
+17:43:51 >> ACQ:MOD AVER 64
+17:44:01 >> ACQ:MOD 64
+17:45:22 >> ACQ:MOD SAMP
+17:56:22 >> DAT:SOU CH2
+
+########################################
+# 09/05/17 - 17:57:11                  #
+# Session started                      #
+# USB0::0x0699::0x0363::C102220::0::INSTR #
+# TEKTRONIX,TDS 1002B,C102220,CF:91.1CT FV:v22.11
+ #
+########################################
+18:22:03 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rbmedicion0.npy
+18:22:54 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rb/Mediciones/medicion1.npy
+18:48:58 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rb/Mediciones/medicion2.npy
+18:50:40 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rb/Mediciones/medicion3.npy
+18:51:34 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rb/Mediciones/medicion4.npy
+19:37:36 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rb/Mediciones/medicion5.npy
+19:41:51 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rb/Mediciones/medicion6.npy
+20:08:36 <> SAVED: D:/ALUMNOS/Grupo 1/Espectro Rb/Mediciones/medicion7.npy
