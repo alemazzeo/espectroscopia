@@ -77,6 +77,8 @@ plt.title('Modulación triangular en corriente')
 plt.grid()
 plt.xlabel('Tiempo (s)')
 plt.ylabel('Voltaje (mV)')
+plt.plot(Tiempo2R,Resta2)
+plt.plot(Tiempo2,Volt2)
 plt.show
 
 #Medición 3 y 4 son las mismas que 2, hay que ver cuál es la mejor o si 
