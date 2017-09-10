@@ -33,6 +33,9 @@ plt.rc('axes.spines', left=True, bottom=True, top=False, right=False)
 # Leyenda (tamaño de la fuenta y ubicación)
 plt.rc('legend', fontsize=14, loc='best')
 
+
+plt.rc('axes', titlesize=14)
+
 # Ejes (tamaño de la fuente)
 plt.rc('axes', labelsize=14)
 
@@ -50,7 +53,7 @@ plt.rc('axes', prop_cycle=lw_cycler * ls_cycler)
 Tiempo0, Temp0 = np.load('medicion0.npy')
 Fig0 = plt.figure()
 plt.plot(Tiempo0, Temp0)
-plt.title('Fluctuación de temperatura')
+#plt.title('Fluctuación de temperatura')
 plt.grid()
 plt.xlabel('Tiempo (s)')
 plt.ylabel('Temperatura (ºC)')
@@ -59,26 +62,24 @@ plt.show
 #%% Modulación triangular en corriente:
 
 Volt1A, Tiempo1A, Volt1B, Tiempo1B = np.load('medicion1.npy')
-Fig1 = plt.figure()
-plt.plot(Tiempo1A,Volt1A)
-plt.plot(Tiempo1B,Volt1B)
-plt.title('Modulación triangular en corriente')
-plt.grid()
-plt.xlabel('Tiempo (s)')
-plt.ylabel('Voltaje (mV)')
-plt.show
-
-
 Resta2, Tiempo2R, Volt2, Tiempo2 = np.load('medicion2.npy')
-Fig2 = plt.figure()
-plt.plot(Tiempo2R,Resta2, label='Resta')
-plt.plot(Tiempo2,Volt2, label='Canal2')
-plt.title('Modulación triangular en corriente')
-plt.grid()
+Dif = Volt1A[0] - Volt1B[0]
+Tiempo1 = Tiempo1A - Tiempo1A[0]
+TiempoR = Tiempo2R - Tiempo2R[0]
+
+
+Fig, ax = plt.subplots(2, sharex='all')
+Fig.subplots_adjust(hspace=0.1)
+ax[0].set_xlabel(' ')
+ax[0].plot(Tiempo1,Volt1A)
+ax[0].plot(Tiempo1,Volt1B + Dif)
+ax[0].grid()
+#ax[1].plot(Tiempo1,Volt1B + Dif - Volt1A, label='Resta')
+ax[1].plot(TiempoR[896:1896],Resta2[896:1896], label='Resta')#[896:1896]
+                                                            #grafica 10mS
+ax[1].grid()
 plt.xlabel('Tiempo (s)')
 plt.ylabel('Voltaje (mV)')
-plt.plot(Tiempo2R,Resta2)
-plt.plot(Tiempo2,Volt2)
 plt.show
 
 #Medición 3 y 4 son las mismas que 2, hay que ver cuál es la mejor o si 
@@ -121,7 +122,7 @@ plt.show
 Fig7 = plt.figure()
 Tiempo7, Temp7, Volt7 = np.load('medicion7.npy')
 plt.plot(Temp7[160:300],Volt7[160:300])
-plt.title('Barrido en temperatura')
+#plt.title('Barrido en temperatura')
 plt.grid()
 plt.xlabel('Temperatura(ºC)')
 plt.ylabel('Voltaje (mV)')
