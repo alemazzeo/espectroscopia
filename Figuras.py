@@ -161,7 +161,7 @@ def plot_espectro_temp():
 def plot_espectro(t0=350, tf=-1150):
     voltA, tiempoA, voltB, tiempoB = np.load('medicion4.npy')
     tiempo = tiempoA - tiempoA[t0]
-    corriente = 140 * tiempo
+    corriente = 140000 * tiempo
 
     picos = [583, 807, 1067, 1188]
     xp = [corriente[i] for i in picos]
@@ -190,7 +190,7 @@ def plot_espectro(t0=350, tf=-1150):
     ax.axvline(xp[2], ls=':', color='0.5', ymax=0.9)
 
     ax.set_xticks(xp)
-    ax.set_xticklabels(['{:.3f}'.format(t - xp[2]) for t in xp],
+    ax.set_xticklabels(['{:.1f}'.format(t - xp[2]) for t in xp],
                        fontsize=13)
 
     ax.annotate('', xy=(xp[0], 0.037), xycoords='data',
